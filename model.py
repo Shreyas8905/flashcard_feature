@@ -53,4 +53,4 @@ def process():
     return jsonify({"flashcards": flashcards})
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8000)
+    app.run(debug=False, port=5005)
