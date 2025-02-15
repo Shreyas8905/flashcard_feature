@@ -20,7 +20,6 @@ def get_youtube_transcript(video_id):
         return " ".join([entry['text'] for entry in transcript])
     except Exception as e:
         return f"Error fetching transcript: {str(e)}"
-
 def generate_flashcards(transcript):
     prompt = f"""
     Convert the following transcript of youtube video into paragraphs(each paragraph should be atmost 100 words), don't add headings and do not include any content except the video content:
@@ -28,7 +27,13 @@ def generate_flashcards(transcript):
     """
     model = genai.GenerativeModel("gemini-2.0-flash")
     response = model.generate_content(prompt)
-    return response.text if response else "Error generating flashcards."
+    
+    if response:
+        print(f"Generated flashcards: {response.text}")  # Log the generated flashcards
+        return response.text
+    else:
+        print("Error generating flashcards.")  # Log error if response is empty or invalid
+        return "Error generating flashcards."
 
 @app.route('/')
 def index():
