@@ -1,4 +1,5 @@
-import os
+import os  # <-- This line was missing
+
 from flask import Flask, render_template, request, jsonify
 import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi
