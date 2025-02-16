@@ -7,7 +7,7 @@ import re
 
 app = Flask(__name__)
 
-genai.configure(api_key="YOUR_API_KEY")
+genai.configure(api_key="AIzaSyAvcRhBO4NabSQCPSyJeqeKIhjAKE13sDE")
 
 def extract_video_id(url):
     pattern = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^\"&?\/\s]{11})"
