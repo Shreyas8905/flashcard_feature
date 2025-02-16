@@ -1,5 +1,5 @@
 .venv
-app.py
+model.py
 tras.py
 output.pdf
 output.txt
