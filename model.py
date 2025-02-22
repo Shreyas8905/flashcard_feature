@@ -5,7 +5,7 @@ import re
 
 app = Flask(__name__)
 
-genai.configure(api_key="AIzaSyB4a8CugmuGNQABq4P3snJPBJ4p2bSjuYM")
+genai.configure(api_key="Yor_api_key_here")
 
 def extract_video_id(url):
     pattern = r"(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^\"&?\/\s]{11})"
@@ -53,4 +53,4 @@ def process():
     return jsonify({"flashcards": flashcards})
 
 if __name__ == '__main__':
-    app.run(debug=False, port=5005)
+    app.run(debug=False, port=5000)
